@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SiteLayoutComponent } from './site-layout.component';
+import { OnlineShopLayoutComponent } from './site-layout.component';
 
-describe('SiteLayoutComponent', () => {
-  let component: SiteLayoutComponent;
-  let fixture: ComponentFixture<SiteLayoutComponent>;
+describe('OnlineShopLayoutComponent', () => {
+  let component: OnlineShopLayoutComponent;
+  let fixture: ComponentFixture<OnlineShopLayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SiteLayoutComponent ]
+      declarations: [ OnlineShopLayoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SiteLayoutComponent);
+    fixture = TestBed.createComponent(OnlineShopLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

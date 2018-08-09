@@ -10,6 +10,7 @@ import { AuthLayoutComponent } from './shared/layouts/auth-layout/auth-layout.co
 import { OnlineShopLayoutComponent } from './shared/layouts/online-shop-layout/online-shop-layout.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import {TokenInterceptor} from "./shared/classes/token.interceptor";
+import { OverviewPageComponent } from './overview-page/overview-page.component';
 
 
 
@@ -19,7 +20,8 @@ import {TokenInterceptor} from "./shared/classes/token.interceptor";
     LoginPageComponent,
     AuthLayoutComponent,
     OnlineShopLayoutComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    OverviewPageComponent
   ],
   imports: [
     BrowserModule,

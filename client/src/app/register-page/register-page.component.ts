@@ -3,6 +3,7 @@ import {AuthService} from "../shared/services/auth.service";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Subscription} from "rxjs/index";
+import {MaterialService} from "../shared/classes/material.service";
 
 @Component({
   selector: 'app-register-page',
@@ -15,8 +16,7 @@ export class RegisterPageComponent implements OnInit {
   aSub: Subscription;
 
   constructor(private auth: AuthService,
-              private router: Router,
-              private route: ActivatedRoute) {
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -24,16 +24,6 @@ export class RegisterPageComponent implements OnInit {
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required, Validators.minLength(6)])
     });
-
-    this.route.queryParams.subscribe(
-      (params: Params) => {
-        if(params['registered']){
-          //use this email and pass to log in
-        } else if(params['accessDenied']) {
-          //log in before open this page
-        }
-      }
-    )
   }
 
   onSubmit() {
@@ -45,6 +35,7 @@ export class RegisterPageComponent implements OnInit {
         }
       }),
       error => {
+        MaterialService.toast(error.error.message);
         console.warn(error);
         this.form.enable()
       }

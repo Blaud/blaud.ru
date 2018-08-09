@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../shared/services/auth.service";
 import {Subscription} from "rxjs";
 import {ActivatedRoute, Params, Router} from "@angular/router";
+import {MaterialService} from "../shared/classes/material.service";
 
 @Component({
   selector: 'app-login-page',
@@ -28,25 +29,22 @@ export class LoginPageComponent implements OnInit, OnDestroy {
     this.route.queryParams.subscribe(
       (params: Params) => {
         if(params['registered']){
-          //use this email and pass to log in
+          MaterialService.toast('use this email and pass to log in')
         } else if(params['accessDenied']) {
-          //log in before open this page
+          MaterialService.toast('log in before open this page')
+        } else if(params['sessionExpired']){
+          MaterialService.toast('session expired, login again')
         }
       }
     )
   }
 
   onSubmit() {
-    // const user = {
-    //   email: this.form.value.email,
-    //   password: this.form.value.password
-    // };
     this.form.disable();
-
     this.aSub = this.auth.login(this.form.value).subscribe(
       () => this.router.navigate(['/overview']),
       error => {
-        console.warn(error);
+        MaterialService.toast(error.error.message);
         this.form.enable()
       }
     )

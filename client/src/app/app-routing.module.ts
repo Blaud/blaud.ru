@@ -5,6 +5,7 @@ import {LoginPageComponent} from "./login-page/login-page.component";
 import {AuthLayoutComponent} from "./shared/layouts/auth-layout/auth-layout.component";
 import {OnlineShopLayoutComponent} from "./shared/layouts/online-shop-layout/online-shop-layout.component";
 import {RegisterPageComponent} from "./register-page/register-page.component";
+import {OverviewPageComponent} from "./overview-page/overview-page.component";
 
 const routes: Routes = [
   {
@@ -18,8 +19,9 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: OnlineShopLayoutComponent, canActivate: [AuthGuard],
-    children: []
+    component: OnlineShopLayoutComponent, canActivate: [AuthGuard], children: [
+      {path: 'overview', component: OverviewPageComponent},
+    ]
   }
 ];
 

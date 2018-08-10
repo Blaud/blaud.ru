@@ -4,7 +4,7 @@
   "description": "my cv website",
   "main": "index.js",
   "engines": {
-    "node": "8.9.4",
+    "node": "10.8.0",
     "npm": "6.3.0"
   },
   "scripts": {

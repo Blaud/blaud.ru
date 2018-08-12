@@ -5,7 +5,7 @@ html, body {
 
 /* line 21, _src/sass/resume.scss */
 .light-text {
-  color: #bfc3f2; }
+  color: #bff2fa; }
 
 /* line 22, _src/sass/resume.scss */
 .contrast-bg {
@@ -17,7 +17,7 @@ html, body {
 
 /* line 24, _src/sass/resume.scss */
 .primary-color {
-  background: #1A237E; }
+  background: #103133; }
 
 /* line 28, _src/sass/resume.scss */
 .primary-dark {
@@ -64,7 +64,7 @@ html, body {
 /* Add room for Footer */
 /* line 68, _src/sass/resume.scss */
 #side-nav {
-  height: 2250px;
+  height: 100%;
   margin-bottom: 0;
   padding: 0; }
 
@@ -387,7 +387,7 @@ blockquote {
 @media (min-width: 600px) and (max-width: 991px) {
   /* line 387, _src/sass/resume.scss */
   #side-nav {
-    height: 3217.5px; }
+    height: 100%; }
   /* line 388, _src/sass/resume.scss */
   h4 {
     font-size: 1.5rem; }

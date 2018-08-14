@@ -11,6 +11,7 @@ import { OnlineShopLayoutComponent } from './shared/layouts/online-shop-layout/o
 import { RegisterPageComponent } from './register-page/register-page.component';
 import {TokenInterceptor} from "./shared/classes/token.interceptor";
 import { OverviewPageComponent } from './overview-page/overview-page.component';
+import { ResumePageComponent } from './resume-page/resume-page.component';
 
 
 
@@ -21,7 +22,8 @@ import { OverviewPageComponent } from './overview-page/overview-page.component';
     AuthLayoutComponent,
     OnlineShopLayoutComponent,
     RegisterPageComponent,
-    OverviewPageComponent
+    OverviewPageComponent,
+    ResumePageComponent,
   ],
   imports: [
     BrowserModule,

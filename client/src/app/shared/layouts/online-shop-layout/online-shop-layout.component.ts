@@ -31,7 +31,7 @@ export class OnlineShopLayoutComponent implements AfterViewInit {
   logout(event: Event) {
     event.preventDefault();
     this.auth.logout();
-    this.router.navigate(['/login'])
+    this.router.navigate(['online_shop/login'])
   }
 
 }

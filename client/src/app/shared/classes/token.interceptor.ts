@@ -15,7 +15,7 @@ export class TokenInterceptor implements HttpInterceptor {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (this.auth.isAuthtenticated()) {
+    if (this.auth.isAuthenticated()) {
       req = req.clone({
         setHeaders: {
           Authorization: this.auth.getToken()
@@ -31,7 +31,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
   private handleAuthError(error: HttpErrorResponse): Observable<any>{
     if (error.status === 401) {
-      this.router.navigate(['/login'], {
+      this.router.navigate(['online_shop/login'], {
         queryParams: {
           sessionExpired: true
         }

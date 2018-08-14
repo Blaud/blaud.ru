@@ -15,10 +15,10 @@ export class AuthGuard implements CanActivate, CanActivateChild {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
-    if (this.auth.isAuthtenticated()) {
+    if (this.auth.isAuthenticated()) {
       return of(true)
     } else {
-      this.router.navigate(['/login'], {
+      this.router.navigate(['online_shop/login'], {
         queryParams: {
           accessDenied: true
         }

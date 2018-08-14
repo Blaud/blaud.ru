@@ -37,10 +37,6 @@ html, body {
   color: #1A237E;
   color: white; }
 
-/* line 46, _src/sass/resume.scss */
-.primary-nav:hover i, .btn-large:hover i {
-  color: contrast-color(#e5dc81); }
-
 /* line 50, _src/sass/resume.scss */
 .floating-download {
   background-color: red; }
@@ -98,13 +94,12 @@ a {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border-radius: none;
   background-color: transparent; }
 
 /* line 100, _src/sass/resume.scss */
 .portrait-wrapper {
   position: absolute;
-  bottom: 7px;
+  bottom: 0px;
   left: 0;
   padding: 20px;
   padding-left: 19%;
@@ -157,7 +152,7 @@ p.side a {
 
 /* line 155, _src/sass/resume.scss */
 .fact-icon {
-  padding-right: 0; }
+  padding-bottom: 0px; }
 
 /* line 162, _src/sass/resume.scss */
 .col.s9.facts-content-col {
@@ -205,12 +200,15 @@ p.side a {
 /* MAIN PANEL AREA */
 /* line 212, _src/sass/resume.scss */
 #main-panel .card-panel {
-  margin: 30px;
+  /*margin: 2%;*/
+  margin-right: 5%;
+  margin-left: 3.3%;
+  margin-top: 2%;
   color: #333; }
 
 /* line 217, _src/sass/resume.scss */
 #main-panel .card-panel p {
-  color: #888;
+  color: #535353;
   font-weight: 300; }
 
 /* line 222, _src/sass/resume.scss */

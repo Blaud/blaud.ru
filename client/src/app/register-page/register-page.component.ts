@@ -29,7 +29,7 @@ export class RegisterPageComponent implements OnInit {
   onSubmit() {
     this.form.disable();
     this.aSub = this.auth.register(this.form.value).subscribe(
-      () => this.router.navigate(['/login'], {
+      () => this.router.navigate(['online_shop/login'], {
         queryParams: {
           registered: true
         }

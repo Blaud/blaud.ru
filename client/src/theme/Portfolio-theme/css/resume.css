@@ -66,13 +66,10 @@ html, body {
 
 /* Attach footer to left column */
 /* line 73, _src/sass/resume.scss */
-main .row, footer.page-footer {
-  margin: 0;
-  margin-bottom: 0; }
 
 /* line 75, _src/sass/resume.scss */
 footer.page-footer {
-  background-color: black; }
+  background-color: #9bb199; }
 
 /* line 77, _src/sass/resume.scss */
 a {
@@ -204,7 +201,9 @@ p.side a {
   margin-right: 5%;
   margin-left: 3.3%;
   margin-top: 2%;
-  color: #333; }
+  color: #0D47A1;
+  background: rgb(251, 255, 251);
+; }
 
 /* line 217, _src/sass/resume.scss */
 #main-panel .card-panel p {

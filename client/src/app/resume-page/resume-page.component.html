@@ -26,7 +26,7 @@
         </div>
         <div class="col s10 facts-content-col">
           <h5 class="side">Contact</h5>
-          <p class="side"><i class="tiny fa fa-phone-square">&nbsp;&nbsp;  </i><a href="tel:+79831441411" target="_blank">+7-983-144-1411</a><br><i class="tiny fa fa-envelope-square">&nbsp;&nbsp;  </i><a href="mailto:iblaudi@gmail.com" target="_blank">iblaudi@gmail.com</a><br><i class="tiny fa fa-twitter-square">&nbsp;&nbsp;  </i><a href="" target="_blank"></a><br><i class="tiny fa fa-linkedin-square">&nbsp;&nbsp;  </i><a href="" target="_blank"></a><br><i class="tiny fa fa-external-link-square">&nbsp;&nbsp;  </i><a href="https://blaud.ru" target="_blank">blaud.ru</a><br>
+          <p class="side"><a href="tel:+79831441411" target="_blank">+7-983-144-1411</a><br><a href="mailto:iblaudi@gmail.com" target="_blank">iblaudi@gmail.com</a><br><a href="https://blaud.ru" target="_blank">blaud.ru</a><br>
           </p>
         </div>
       </div>
@@ -85,48 +85,50 @@
         </div>
 
         <div class="col s12 m10 l11 right card-panel">
-        <h4 class="center-align">My projects and samples</h4>
-        <div class="col s12 m12 l3 card-panel">
-          <div class="row">
-            <a routerLink="online_shop"><div class="col s12 facts-content-col job">
-              <h4>Online shop CRM</h4>
-              <h5 class="role">Description:</h5>
-              <p>Simple crm example with authorisation.</p>
-              <p>(part of this web app)</p>
-              <h5 class="role">Technologies:</h5>
-              <p>&mdash;	Angular 6, NodeJs, Materialize</p>
-              <h5 class="role">GitHub:</h5>
-              <p><a href="https://github.com/Blaud/blaud.ru">github repository blaud.ru</a></p>
-            </div></a>
+          <h4 class="center">My projects and samples(live preview)</h4>
+          <div class="col s11 m11 l3 card-panel">
+            <div class="row">
+              <a routerLink="online_shop"><div class="col s12 facts-content-col job">
+                <h4>Online shop CRM</h4>
+                <h5 class="role">Description:</h5>
+                <p>Simple crm example with authorisation. All projects are clickable.</p>
+                <p>(part of this web app, live preview)</p>
+                <h5 class="role">Technologies:</h5>
+                <p>&mdash;	Angular 6, NodeJs, Materialize</p>
+                <h5 class="role">GitHub:</h5>
+                <p><a href="https://github.com/Blaud/blaud.ru">github repository blaud.ru</a></p>
+              </div></a>
+            </div>
+          </div>
+          <div class="col s11 m11 l3 card-panel">
+            <div class="row">
+              <a href="https://edujetplayer.blaud.ru"><div class="col s12 facts-content-col job">
+                <h4>EduJetPlayer</h4>
+                <h5 class="role">Description:</h5>
+                <p>Service that provides interface for learning any language by subtitles</p>
+                <p>(live preview)</p>
+                <h5 class="role">Technologies:</h5>
+                <p>&mdash;	AngularJs, NodeJs, bootstrap</p>
+                <h5 class="role">GitHub:</h5>
+                <p><a href="https://github.com/Blaud/edujetplayer">github repository EduJetPlayer</a></p>
+              </div></a>
+            </div>
+          </div>
+          <div class="col s11 m11 l3 card-panel">
+            <div class="row">
+              <a href="https://github.com/Blaud/overlap2d-runtime-html5-support"><div class="col s12 facts-content-col job">
+                <h4>Overlap2D HTML5</h4>
+                <h5 class="role">Description:</h5>
+                <p>Provide ability to compile Overlap2D application to runnable HTML5 project</p>
+                <p>(example in github repo)</p>
+                <h5 class="role">Technologies:</h5>
+                <p>&mdash;	LibGDX, OverLap2D, Java</p>
+                <h5 class="role">GitHub:</h5>
+                <p><a href="https://github.com/Blaud/overlap2d-runtime-html5-support">github repository Overlap2D HTML5</a></p>
+              </div></a>
+            </div>
           </div>
         </div>
-        <div class="col s12 m12 l3 card-panel">
-          <div class="row">
-            <a href="https://edujetplayer.blaud.ru"><div class="col s12 facts-content-col job">
-              <h4>EduJetPlayer</h4>
-              <h5 class="role">Description:</h5>
-              <p>Service that provides interface for learning any language by subtitles</p>
-              <h5 class="role">Technologies:</h5>
-              <p>&mdash;	AngularJs, NodeJs, bootstrap</p>
-              <h5 class="role">GitHub:</h5>
-              <p><a href="https://github.com/Blaud/edujetplayer">github repository EduJetPlayer</a></p>
-            </div></a>
-          </div>
-        </div>
-        <div class="col s12 m12 l3 card-panel">
-          <div class="row">
-            <a href="https://edujetplayer.blaud.ru"><div class="col s12 facts-content-col job">
-              <h4>Overlap2D HTML5</h4>
-              <h5 class="role">Description:</h5>
-              <p>Provide ability to compile Overlap2D application to runnable HTML5 project</p>
-              <h5 class="role">Technologies:</h5>
-              <p>&mdash;	LibGDX, OverLap2D, Java</p>
-              <h5 class="role">GitHub:</h5>
-              <p><a href="https://github.com/Blaud/overlap2d-runtime-html5-support">github repository Overlap2D HTML5</a></p>
-            </div></a>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -134,11 +136,11 @@
 
 <!--FLOATING BTN-->
 <div class="fixed-action-btn" #floating>
-  <a class="btn-floating btn-large red">
+  <a class="btn-floating btn-large green">
     <i class="large material-icons">file_download</i>
   </a>
   <ul>
-    <li><a class="btn-floating green"><i class="material-icons">assignment</i></a></li>
-    <li><a class="btn-floating blue"><i class="material-icons">list</i></a></li>
+    <li><a class="btn-floating red" href="../../assets/resume/downloads/Dvoeglazov_Nikolay_rus.pdf"><i class="material-icons">picture_as_pdf</i></a></li>
+    <li><a class="btn-floating blue" href="../../assets/resume/downloads/Dvoeglazov_Nikolay_rus.doc"><i class="material-icons">insert_drive_file</i></a></li>
   </ul>
 </div>

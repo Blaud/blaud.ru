@@ -6,13 +6,17 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AppComponent} from './app.component';
 import {LoginPageComponent} from './login-page/login-page.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { AuthLayoutComponent } from './shared/layouts/auth-layout/auth-layout.component';
-import { OnlineShopLayoutComponent } from './shared/layouts/online-shop-layout/online-shop-layout.component';
-import { RegisterPageComponent } from './register-page/register-page.component';
+import {AuthLayoutComponent} from './shared/layouts/auth-layout/auth-layout.component';
+import {OnlineShopLayoutComponent} from './shared/layouts/online-shop-layout/online-shop-layout.component';
+import {RegisterPageComponent} from './register-page/register-page.component';
 import {TokenInterceptor} from "./shared/classes/token.interceptor";
-import { OverviewPageComponent } from './overview-page/overview-page.component';
-import { ResumePageComponent } from './resume-page/resume-page.component';
-
+import {OverviewPageComponent} from './overview-page/overview-page.component';
+import {ResumePageComponent} from './resume-page/resume-page.component';
+import {AnalyticsPageComponent} from './analytics-page/analytics-page.component';
+import {HistoryPageComponent} from './history-page/history-page.component';
+import {OrderPageComponent} from './order-page/order-page.component';
+import {CategoriesPageComponent} from './categories-page/categories-page.component';
+import { LoaderComponent } from './shared/components/loader/loader.component';
 
 
 @NgModule({
@@ -24,6 +28,11 @@ import { ResumePageComponent } from './resume-page/resume-page.component';
     RegisterPageComponent,
     OverviewPageComponent,
     ResumePageComponent,
+    AnalyticsPageComponent,
+    HistoryPageComponent,
+    OrderPageComponent,
+    CategoriesPageComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

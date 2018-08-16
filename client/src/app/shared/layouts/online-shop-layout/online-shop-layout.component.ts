@@ -13,11 +13,11 @@ export class OnlineShopLayoutComponent implements AfterViewInit {
   @ViewChild('floating') floatingRef: ElementRef;
 
   links = [
-    {url: '/overview', name: 'Обзор'},
-    {url: '/analytics', name: 'Аналитика'},
-    {url: '/history', name: 'История'},
-    {url: '/order', name: 'Добавить заказ'},
-    {url: '/categories', name: 'Ассортимент'}
+    {url: '/online_shop/overview', name: 'Обзор'},
+    {url: '/online_shop/analytics', name: 'Аналитика'},
+    {url: '/online_shop/history', name: 'История'},
+    {url: '/online_shop/order', name: 'Добавить заказ'},
+    {url: '/online_shop/categories', name: 'Ассортимент'}
   ];
 
   constructor(private auth: AuthService,

@@ -58,18 +58,6 @@ html, body {
   height: 100%;
   font-size: 100%; }
 
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
 /* Add room for Footer */
 /* line 68, _src/sass/resume.scss */
 #side-nav {

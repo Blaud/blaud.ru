@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node index",
+    "start debug": "node %NODE_DEBUG_OPTION% index",
     "server": "nodemon index",
     "client-install": "npm install --prefix client",
     "client": "npm run start --prefix client",

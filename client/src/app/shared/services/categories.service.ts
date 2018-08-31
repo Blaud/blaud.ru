@@ -19,4 +19,26 @@ export class CategoriesService {
     return this.http.get<Category>(`/api/online_shop/category/${id}`)
   }
 
+  create(name: string, image?: File): Observable<Category> {
+    const fd = new FormData();
+
+    if (image) {
+      fd.append('image', image, image.name)
+    }
+    fd.append('name', name);
+
+    return this.http.post<Category>('/api/online_shop/category', fd);
+  }
+
+  update(id:string, name: string, image?: File): Observable<Category> {
+    const fd = new FormData();
+
+    if (image) {
+      fd.append('image', image, image.name)
+    }
+    fd.append('name', name);
+
+    return this.http.patch<Category>(`/api/online_shop/category/${id}`, fd);
+  }
+
 }

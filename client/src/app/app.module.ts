@@ -16,9 +16,12 @@ import {AnalyticsPageComponent} from './analytics-page/analytics-page.component'
 import {HistoryPageComponent} from './history-page/history-page.component';
 import {OrderPageComponent} from './order-page/order-page.component';
 import {CategoriesPageComponent} from './categories-page/categories-page.component';
-import { LoaderComponent } from './shared/components/loader/loader.component';
-import { CategoriesFormComponent } from './categories-page/categories-form/categories-form.component';
-import { PositionsFormComponent } from './categories-page/categories-form/positions-form/positions-form.component';
+import {LoaderComponent} from './shared/components/loader/loader.component';
+import {CategoriesFormComponent} from './categories-page/categories-form/categories-form.component';
+import {PositionsFormComponent} from './categories-page/categories-form/positions-form/positions-form.component';
+import {IndexPageComponent} from './index-page/index-page.component';
+import {ParticlesModule} from 'angular-particle';
+import { ParticleEffectButtonModule } from "angular-particle-effect-button";
 
 
 @NgModule({
@@ -37,13 +40,16 @@ import { PositionsFormComponent } from './categories-page/categories-form/positi
     LoaderComponent,
     CategoriesFormComponent,
     PositionsFormComponent,
+    IndexPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ParticlesModule,
+    ParticleEffectButtonModule
   ],
   providers: [
     {

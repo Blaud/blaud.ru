@@ -1,8 +1,18 @@
 /* line 16, _src/sass/resume.scss */
 html, body {
-  width: auto !important;
-  overflow-x: hidden !important; }
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+main {
+  flex: 1 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+
+  max-width: 100%;
+  overflow-x: hidden;
+}
 /* line 21, _src/sass/resume.scss */
 .light-text {
   color: #bff2fa; }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -6,8 +6,10 @@ import {Router} from "@angular/router";
   templateUrl: './index-page.component.html',
   styleUrls: ['./index-page.component.css']
 })
-export class IndexPageComponent implements OnInit {
+export class IndexPageComponent implements OnInit, OnDestroy {
 
+
+  @ViewChild('particlesCanvas') particlesCanvas: ElementRef;
   hidden: boolean = false;
 
   myStyle: object = {};
@@ -34,7 +36,7 @@ export class IndexPageComponent implements OnInit {
 
       particles: {
         number: {
-          "value": 130,
+          "value": 80,
           "density": {
             "enable": true,
             "value_area": 1000
@@ -53,13 +55,13 @@ export class IndexPageComponent implements OnInit {
             "nb_sides": 5
           },
           "image": {
-            "src": "img/github.svg",
+            "src": "",
             "width": 100,
             "height": 100
           }
         },
         opacity: {
-          "value": 0.5,
+          "value": 0.7,
           "random": false,
           "anim": {
             "enable": false,
@@ -69,7 +71,7 @@ export class IndexPageComponent implements OnInit {
           }
         },
         size: {
-          "value": 3,
+          "value": 5,
           "random": true,
           "anim": {
             "enable": false,
@@ -80,9 +82,9 @@ export class IndexPageComponent implements OnInit {
         },
         line_linked: {
           "enable": true,
-          "distance": 150,
+          "distance": 200,
           "color": "#20ff00",
-          "opacity": 0.4,
+          "opacity": 0.7,
           "width": 1
         },
         move: {
@@ -108,15 +110,15 @@ export class IndexPageComponent implements OnInit {
           },
           onclick: {
             "enable": true,
-            "mode": "push"
+            "mode": "repulse"
           },
           "resize": true
         },
         modes: {
           "grab": {
-            "distance": 300,
+            "distance": 200,
             "line_linked": {
-              "opacity": 1
+              "opacity": 0.9
             }
           },
           bubble: {
@@ -137,10 +139,10 @@ export class IndexPageComponent implements OnInit {
           }
         }
       },
-      retina_detect: true,
+      retina_detect: false,
       config_demo: {
         "hide_card": false,
-        "background_color": "#869183",
+        "background_color": "#6f7a6c",
         "background_image": "",
         "background_position": "50% 50%",
         "background_repeat": "no-repeat",
@@ -148,6 +150,10 @@ export class IndexPageComponent implements OnInit {
       }
     }
 
+  }
+
+  ngOnDestroy(){
+    this.particlesCanvas.nativeElement.remove();
   }
 
   onResumeBtnClick(){

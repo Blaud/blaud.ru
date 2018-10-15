@@ -21,7 +21,7 @@ import {CategoriesFormComponent} from './categories-page/categories-form/categor
 import {PositionsFormComponent} from './categories-page/categories-form/positions-form/positions-form.component';
 import {IndexPageComponent} from './index-page/index-page.component';
 import {ParticlesModule} from 'angular-particle';
-import { ParticleEffectButtonModule } from "angular-particle-effect-button";
+import {ParticleEffectButtonModule} from "angular-particle-effect-button";
 
 
 @NgModule({

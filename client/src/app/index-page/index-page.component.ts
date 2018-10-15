@@ -22,6 +22,7 @@ export class IndexPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.myStyle = {
+      'background-color': '#000000',
       'position': 'fixed',
       'width': '100%',
       'height': '100%',
@@ -29,14 +30,14 @@ export class IndexPageComponent implements OnInit, OnDestroy {
       'top': 0,
       'left': 0,
       'right': 0,
-      'bottom': 0,
+      'bottom': 0
     };
 
     this.myParams = {
 
       particles: {
         number: {
-          "value": 80,
+          "value": 100,
           "density": {
             "enable": true,
             "value_area": 1000
@@ -61,7 +62,7 @@ export class IndexPageComponent implements OnInit, OnDestroy {
           }
         },
         opacity: {
-          "value": 0.7,
+          "value": 1,
           "random": false,
           "anim": {
             "enable": false,
@@ -76,7 +77,7 @@ export class IndexPageComponent implements OnInit, OnDestroy {
           "anim": {
             "enable": false,
             "speed": 40,
-            "size_min": 0.1,
+            "size_min": 1,
             "sync": false
           }
         },
@@ -84,7 +85,7 @@ export class IndexPageComponent implements OnInit, OnDestroy {
           "enable": true,
           "distance": 200,
           "color": "#20ff00",
-          "opacity": 0.7,
+          "opacity": 1,
           "width": 1
         },
         move: {
@@ -94,6 +95,7 @@ export class IndexPageComponent implements OnInit, OnDestroy {
           "random": false,
           "straight": false,
           "out_mode": "out",
+          "bounce": false,
           "attract": {
             "enable": false,
             "rotateX": 600,
@@ -139,7 +141,7 @@ export class IndexPageComponent implements OnInit, OnDestroy {
           }
         }
       },
-      retina_detect: false,
+      retina_detect: true,
       config_demo: {
         "hide_card": false,
         "background_color": "#6f7a6c",

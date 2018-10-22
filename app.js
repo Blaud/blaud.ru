@@ -36,6 +36,13 @@ app.use('/api/online_shop/category', categoryRoutes);
 app.use('/api/online_shop/order', orderRoutes);
 app.use('/api/online_shop/position', positionRoutes);
 
+const fs = require('fs');
+let stream = fs.createWriteStream('client/dist/client/'+keys.loaderio+'.txt');
+stream.once('open', function(fd) {
+    stream.write(keys.loaderio);
+    stream.end();
+});
+
 if (process.env.NODE_ENV === 'production'){
     app.use(express.static('client/dist/client'));
 

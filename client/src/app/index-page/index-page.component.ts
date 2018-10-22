@@ -37,10 +37,10 @@ export class IndexPageComponent implements OnInit, OnDestroy {
 
       particles: {
         number: {
-          "value": 100,
+          "value": 30,
           "density": {
             "enable": true,
-            "value_area": 1000
+            "value_area": 500
           }
         },
         color: {

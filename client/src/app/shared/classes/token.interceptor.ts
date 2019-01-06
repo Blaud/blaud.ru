@@ -1,10 +1,10 @@
-import {Injectable} from "@angular/core";
-import {AuthService} from "../services/auth.service";
-import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {catchError} from "rxjs/operators";
-import {throwError} from "rxjs/internal/observable/throwError";
-import {Router} from "@angular/router";
+import {Injectable} from '@angular/core';
+import {AuthService} from '../services/auth.service';
+import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {catchError} from 'rxjs/operators';
+import {throwError} from 'rxjs/internal/observable/throwError';
+import {Router} from '@angular/router';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
@@ -20,7 +20,7 @@ export class TokenInterceptor implements HttpInterceptor {
         setHeaders: {
           Authorization: this.auth.getToken()
         }
-      })
+      });
     }
     return next.handle(req).pipe(
       catchError(
@@ -29,13 +29,13 @@ export class TokenInterceptor implements HttpInterceptor {
     );
   }
 
-  private handleAuthError(error: HttpErrorResponse): Observable<any>{
+  private handleAuthError(error: HttpErrorResponse): Observable<any> {
     if (error.status === 401) {
       this.router.navigate(['online_shop/login'], {
         queryParams: {
           sessionExpired: true
         }
-      })
+      });
 
     }
     return throwError(error);

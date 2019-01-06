@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {AuthService} from "../../services/auth.service";
-import {Router} from "@angular/router";
-import {MaterialService} from "../../classes/material.service";
+import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
+import {MaterialService} from '../../classes/material.service';
 
 @Component({
   selector: 'app-online-shop-layout',
@@ -25,13 +25,13 @@ export class OnlineShopLayoutComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    MaterialService.initializeFloatingButton(this.floatingRef)
+    MaterialService.initializeFloatingButton(this.floatingRef);
   }
 
   logout(event: Event) {
     event.preventDefault();
     this.auth.logout();
-    this.router.navigate(['online_shop/login'])
+    this.router.navigate(['online_shop/login']);
   }
 
 }

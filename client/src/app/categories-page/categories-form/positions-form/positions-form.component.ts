@@ -1,8 +1,8 @@
 import {AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {PositionsService} from "../../../shared/services/positions.service";
-import {Position} from "../../../shared/interfaces";
-import {MaterialInstance, MaterialService} from "../../../shared/classes/material.service";
-import {FormGroup, FormControl, Validators} from "@angular/forms";
+import {PositionsService} from '../../../shared/services/positions.service';
+import {Position} from '../../../shared/interfaces';
+import {MaterialInstance, MaterialService} from '../../../shared/classes/material.service';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-positions-form',
@@ -30,12 +30,12 @@ export class PositionsFormComponent implements OnInit, AfterViewInit, OnDestroy 
     this.positionsService.getAllPositions(this.categoryId).subscribe(positions => {
       this.positions = positions;
       this.loading = false;
-    })
+    });
   }
 
   ngAfterViewInit() {
     this.modal = MaterialService.initModal(this.modalRef);
-    MaterialService.updateTextInputs()
+    MaterialService.updateTextInputs();
   }
 
   ngOnDestroy() {
@@ -49,7 +49,7 @@ export class PositionsFormComponent implements OnInit, AfterViewInit, OnDestroy 
       cost: position.cost
     });
     this.modal.open();
-    MaterialService.updateTextInputs()
+    MaterialService.updateTextInputs();
   }
 
   onAddPosition() {
@@ -75,7 +75,7 @@ export class PositionsFormComponent implements OnInit, AfterViewInit, OnDestroy 
     const completed = () => {
       this.modal.close();
       this.form.reset({name: '', cost: 1});
-      this.form.enable()
+      this.form.enable();
     };
 
     if (this.positionId) {
@@ -87,22 +87,22 @@ export class PositionsFormComponent implements OnInit, AfterViewInit, OnDestroy 
           MaterialService.toast('Позиция обновлена');
         },
         error => {
-          MaterialService.toast(error.error.message)
+          MaterialService.toast(error.error.message);
         },
         completed
-      )
+      );
 
     } else {
       this.positionsService.createPosition(newPosition).subscribe(
         position => {
           MaterialService.toast('Позиция создана');
-          this.positions.push(position)
+          this.positions.push(position);
         },
         error => {
-          MaterialService.toast(error.error.message)
+          MaterialService.toast(error.error.message);
         },
         completed
-      )
+      );
     }
   }
 
@@ -115,12 +115,12 @@ export class PositionsFormComponent implements OnInit, AfterViewInit, OnDestroy 
         response => {
           const idx = this.positions.findIndex(p => p._id === position._id);
           this.positions.splice(idx, 1);
-          MaterialService.toast(response.message)
+          MaterialService.toast(response.message);
         },
         error => {
-          MaterialService.toast(error.error.message)
+          MaterialService.toast(error.error.message);
         }
-      )
+      );
     }
   }
 

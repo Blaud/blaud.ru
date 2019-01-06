@@ -1,4 +1,4 @@
-import {ElementRef} from "@angular/core";
+import {ElementRef} from '@angular/core';
 
 declare var M;
 
@@ -10,16 +10,16 @@ export interface MaterialInstance {
 }
 
 export class MaterialService {
-  static toast(message: string){
-    M.toast({html: message})
+  static toast(message: string) {
+    M.toast({html: message});
   }
-  static initializeFloatingButton(ref: ElementRef){
-    M.FloatingActionButton.init(ref.nativeElement)
+  static initializeFloatingButton(ref: ElementRef) {
+    M.FloatingActionButton.init(ref.nativeElement);
   }
-  static updateTextInputs(){
-    M.updateTextFields()
+  static updateTextInputs() {
+    M.updateTextFields();
   }
-  static initModal(ref: ElementRef): MaterialInstance{
-    return M.Modal.init(ref.nativeElement)
+  static initModal(ref: ElementRef): MaterialInstance {
+    return M.Modal.init(ref.nativeElement);
   }
 }

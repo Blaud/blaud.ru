@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-index-page',
@@ -10,12 +10,12 @@ export class IndexPageComponent implements OnInit, OnDestroy {
 
 
   @ViewChild('particlesCanvas') particlesCanvas: ElementRef;
-  hidden: boolean = false;
+  hidden = false;
 
   myStyle: object = {};
   myParams: object = {};
-  width: number = 100;
-  height: number = 100;
+  width = 100;
+  height = 100;
 
   constructor(private router: Router) {
   }
@@ -37,130 +37,130 @@ export class IndexPageComponent implements OnInit, OnDestroy {
 
       particles: {
         number: {
-          "value": 30,
-          "density": {
-            "enable": true,
-            "value_area": 500
+          'value': 30,
+          'density': {
+            'enable': true,
+            'value_area': 500
           }
         },
         color: {
-          "value": "#0017ff"
+          'value': '#0017ff'
         },
         shape: {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
+          'type': 'circle',
+          'stroke': {
+            'width': 0,
+            'color': '#000000'
           },
-          "polygon": {
-            "nb_sides": 5
+          'polygon': {
+            'nb_sides': 5
           },
-          "image": {
-            "src": "",
-            "width": 100,
-            "height": 100
+          'image': {
+            'src': '',
+            'width': 100,
+            'height': 100
           }
         },
         opacity: {
-          "value": 1,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
+          'value': 1,
+          'random': false,
+          'anim': {
+            'enable': false,
+            'speed': 1,
+            'opacity_min': 0.1,
+            'sync': false
           }
         },
         size: {
-          "value": 5,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 1,
-            "sync": false
+          'value': 5,
+          'random': true,
+          'anim': {
+            'enable': false,
+            'speed': 40,
+            'size_min': 1,
+            'sync': false
           }
         },
         line_linked: {
-          "enable": true,
-          "distance": 200,
-          "color": "#20ff00",
-          "opacity": 1,
-          "width": 1
+          'enable': true,
+          'distance': 200,
+          'color': '#20ff00',
+          'opacity': 1,
+          'width': 1
         },
         move: {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
+          'enable': true,
+          'speed': 6,
+          'direction': 'none',
+          'random': false,
+          'straight': false,
+          'out_mode': 'out',
+          'bounce': false,
+          'attract': {
+            'enable': false,
+            'rotateX': 600,
+            'rotateY': 1200
           }
         }
       },
       interactivity: {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "grab"
+        'detect_on': 'canvas',
+        'events': {
+          'onhover': {
+            'enable': true,
+            'mode': 'grab'
           },
           onclick: {
-            "enable": true,
-            "mode": "repulse"
+            'enable': true,
+            'mode': 'repulse'
           },
-          "resize": true
+          'resize': true
         },
         modes: {
-          "grab": {
-            "distance": 200,
-            "line_linked": {
-              "opacity": 0.9
+          'grab': {
+            'distance': 200,
+            'line_linked': {
+              'opacity': 0.9
             }
           },
           bubble: {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
+            'distance': 400,
+            'size': 40,
+            'duration': 2,
+            'opacity': 8,
+            'speed': 3
           },
           repulse: {
-            "distance": 200
+            'distance': 200
           },
           push: {
-            "particles_nb": 4
+            'particles_nb': 4
           },
           remove: {
-            "particles_nb": 2
+            'particles_nb': 2
           }
         }
       },
       retina_detect: true,
       config_demo: {
-        "hide_card": false,
-        "background_color": "#6f7a6c",
-        "background_image": "",
-        "background_position": "50% 50%",
-        "background_repeat": "no-repeat",
-        "background_size": "cover"
+        'hide_card': false,
+        'background_color': '#6f7a6c',
+        'background_image': '',
+        'background_position': '50% 50%',
+        'background_repeat': 'no-repeat',
+        'background_size': 'cover'
       }
-    }
+    };
 
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.particlesCanvas.nativeElement.remove();
   }
 
-  onResumeBtnClick(){
-    this.hidden=true;
-    setTimeout(()=>{this.router.navigate(['resume'])}, 1500);
+  onResumeBtnClick() {
+    this.hidden = true;
+    setTimeout(() => {this.router.navigate(['resume']); }, 1500);
   }
 
 }

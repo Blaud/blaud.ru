@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {MaterialService} from "../shared/classes/material.service";
+import {MaterialService} from '../shared/classes/material.service';
 
 @Component({
   selector: 'app-resume-page',
@@ -13,7 +13,7 @@ export class ResumePageComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit() {
-    MaterialService.initializeFloatingButton(this.floatingRef)
+    MaterialService.initializeFloatingButton(this.floatingRef);
   }
 
 }

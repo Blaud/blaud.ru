@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../shared/services/auth.service";
-import {Subscription} from "rxjs";
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {MaterialService} from "../shared/classes/material.service";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AuthService} from '../shared/services/auth.service';
+import {Subscription} from 'rxjs';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {MaterialService} from '../shared/classes/material.service';
 
 @Component({
   selector: 'app-login-page',
@@ -28,15 +28,15 @@ export class LoginPageComponent implements OnInit, OnDestroy {
 
     this.route.queryParams.subscribe(
       (params: Params) => {
-        if(params['registered']){
-          MaterialService.toast('use this email and pass to log in')
-        } else if(params['accessDenied']) {
-          MaterialService.toast('log in before open this page')
-        } else if(params['sessionExpired']){
-          MaterialService.toast('session expired, login again')
+        if (params['registered']) {
+          MaterialService.toast('use this email and pass to log in');
+        } else if (params['accessDenied']) {
+          MaterialService.toast('log in before open this page');
+        } else if (params['sessionExpired']) {
+          MaterialService.toast('session expired, login again');
         }
       }
-    )
+    );
   }
 
   onSubmit() {
@@ -45,14 +45,14 @@ export class LoginPageComponent implements OnInit, OnDestroy {
       () => this.router.navigate(['online_shop/overview']),
       error => {
         MaterialService.toast(error.error.message);
-        this.form.enable()
+        this.form.enable();
       }
-    )
+    );
   }
 
-  ngOnDestroy(){
-    if(this.aSub){
-      this.aSub.unsubscribe()
+  ngOnDestroy() {
+    if (this.aSub) {
+      this.aSub.unsubscribe();
     }
   }
 

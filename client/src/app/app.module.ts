@@ -1,15 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {LoginPageComponent} from './login-page/login-page.component';
-import {AppRoutingModule} from "./app-routing.module";
+import {AppRoutingModule} from './app-routing.module';
 import {AuthLayoutComponent} from './shared/layouts/auth-layout/auth-layout.component';
 import {OnlineShopLayoutComponent} from './shared/layouts/online-shop-layout/online-shop-layout.component';
 import {RegisterPageComponent} from './register-page/register-page.component';
-import {TokenInterceptor} from "./shared/classes/token.interceptor";
+import {TokenInterceptor} from './shared/classes/token.interceptor';
 import {OverviewPageComponent} from './overview-page/overview-page.component';
 import {ResumePageComponent} from './resume-page/resume-page.component';
 import {AnalyticsPageComponent} from './analytics-page/analytics-page.component';
@@ -21,7 +21,7 @@ import {CategoriesFormComponent} from './categories-page/categories-form/categor
 import {PositionsFormComponent} from './categories-page/categories-form/positions-form/positions-form.component';
 import {IndexPageComponent} from './index-page/index-page.component';
 import {ParticlesModule} from 'angular-particle';
-import {ParticleEffectButtonModule} from "angular-particle-effect-button";
+import {ParticleEffectButtonModule} from 'angular-particle-effect-button';
 
 
 @NgModule({

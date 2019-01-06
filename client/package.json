@@ -1,5 +1,5 @@
 {
-  "name": "Resume",
+  "name": "resume",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,6 +7,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
+    "lint:fix": "ng lint client --fix && ng lint client-e2e --fix",
     "e2e": "ng e2e"
   },
   "private": true,

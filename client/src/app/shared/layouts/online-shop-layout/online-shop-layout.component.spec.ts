@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OnlineShopLayoutComponent } from './site-layout.component';
+import { OnlineShopLayoutComponent } from './online-shop-layout.component';
 
 describe('OnlineShopLayoutComponent', () => {
   let component: OnlineShopLayoutComponent;

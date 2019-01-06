@@ -75,7 +75,7 @@ export class CategoriesFormComponent implements OnInit {
 
     const reader = new FileReader();
     reader.onload = () => {
-      this.imagePreview = reader.result;
+      this.imagePreview = <string>reader.result;
     };
 
     reader.readAsDataURL(file);

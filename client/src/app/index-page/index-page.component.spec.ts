@@ -1,3 +1,8 @@
+import { ParticleEffectButtonModule } from 'angular-particle-effect-button';
+import { ParticlesModule } from 'angular-particle';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IndexPageComponent } from './index-page.component';
@@ -8,6 +13,13 @@ describe('IndexPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports : [
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule,
+        ParticlesModule,
+        ParticleEffectButtonModule
+      ],
       declarations: [ IndexPageComponent ]
     })
     .compileComponents();

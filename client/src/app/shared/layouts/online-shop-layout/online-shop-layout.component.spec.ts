@@ -1,3 +1,6 @@
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OnlineShopLayoutComponent } from './online-shop-layout.component';
@@ -8,6 +11,11 @@ describe('OnlineShopLayoutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports : [
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule
+      ],
       declarations: [ OnlineShopLayoutComponent ]
     })
     .compileComponents();

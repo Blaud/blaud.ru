@@ -16,7 +16,7 @@ const positionRoutes = require('./routes/online_shop/position');
 
 const app = express();
 
-mongoose.connect(keys.mongoURI)
+mongoose.connect(keys.mongoURI,  { useNewUrlParser: true })
     .then(()=>console.log('mongoDB connected'))
     .catch(error => console.log(error));
 

@@ -30,4 +30,8 @@ describe('RegisterPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have span error', () => {
+    expect(component).toBeTruthy();
+  });
 });
